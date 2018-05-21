@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="left-sidebar">
+    <div class="left-sidebar-title">
+      <h2>Bulldog Ganado Tracking</h2>
+    </div>
+    <div *ngFor="let marker of markers">
+      <div class="marker-block">
+        <div class="marker-left-block">
+          <img [src]="marker.photoUrl" class="property-thumbnail"/>
+        </div>
+        <div class="marker-right-block">
+          <p>
+            <strong>{{marker.title}}</strong><br />
+            {{marker.description}}
+          </p>
+        </div>
+      </div>
+      <button class="button">ver en mapa</button>
+    </div>
+  </div>
+  <div class="map-container">
+    <div id="map" class="map"></div>
+  </div>
+</div>

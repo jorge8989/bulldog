@@ -1,0 +1,66 @@
+h1, h2, h3, h4, p, a {
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  color: #292b2c;
+}
+
+.container {
+  display: flex;
+  align-items: stretch;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+}
+
+.left-sidebar {
+  width: 30%;
+  padding: 0px 15px;
+}
+
+.map-container {
+  width: 70%;
+  position: relative;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.price {
+  font-size: 0.8em;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 8px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+.button:hover {
+  cursor: pointer;
+}
+
+.property-thumbnail {
+  width: 90px;
+  height: 90px;
+}
+
+.marker-block {
+  display: flex;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.marker-right-block {
+  padding: 0px 15px;
+}

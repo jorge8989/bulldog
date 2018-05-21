@@ -6,10 +6,12 @@ import { environment } from '../environments/environment';
 import { MarkerService } from './marker.service';
 
 import { AppComponent } from './app.component';
+import { MapComponent } from './map/map.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,

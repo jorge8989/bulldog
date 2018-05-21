@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MarkerService } from './marker.service';
+import { MapComponent } from './map/map.component';
 import { Marker } from './marker';
 
 
