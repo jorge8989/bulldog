@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { MarkerService } from './marker.service';
+import { Marker } from './marker';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  markers: Marker[];
   title = 'app';
+  constructor(public markerService: MarkerService) {}
+  ngOnInit() {
+    this.markerService.getMarkers().subscribe(markers => {
+      this.markers = markers;
+    });
+  }
 }
