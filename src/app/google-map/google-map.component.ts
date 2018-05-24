@@ -1,27 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Marker } from './../marker';
 
 @Component({
   selector: 'app-google-map',
   templateUrl: './google-map.component.html',
   styleUrls: ['./google-map.component.css']
 })
-export class GoogleMapComponent implements OnInit {
-  lat: number;
-  lng: number;
-
+export class GoogleMapComponent {
+  @Input() markers: Marker[];
   constructor() { }
-
-  ngOnInit() {
-    this.getUserLocation();
-  }
-
-  private getUserLocation() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(position => {
-        this.lat = position.coords.latitude;
-        this.lng = position.coords.longitude;
-      });
-    }
-  }
-
 }
