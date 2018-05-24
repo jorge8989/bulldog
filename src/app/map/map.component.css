@@ -24,13 +24,6 @@ h1, h2, h3, h4, p, a {
   position: relative;
 }
 
-#map {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-}
-
 .price {
   font-size: 0.8em;
   font-weight: bold;
@@ -38,13 +31,14 @@ h1, h2, h3, h4, p, a {
 }
 
 .button {
-  background-color: #4CAF50; /* Green */
+  background-color: #13b5c7; /* Blue */
   border: none;
   color: white;
   padding: 8px 8px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  border-radius: 3%;
 }
 .button:hover {
   cursor: pointer;

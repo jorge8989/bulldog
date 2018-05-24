@@ -11,6 +11,7 @@ export const environment = {
     databaseURL: "https://bulldog-c60eb.firebaseio.com",
     projectId: "bulldog-c60eb",
     storageBucket: "bulldog-c60eb.appspot.com",
-    messagingSenderId: "285981530369"
+    messagingSenderId: "285981530369",
+    googleMapsKey: "AIzaSyDyXVNvzpGYnZvbPlgkc24u0rdEGgyl46I",
   }
 };

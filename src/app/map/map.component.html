@@ -1,7 +1,7 @@
 <div class="container">
   <div class="left-sidebar">
     <div class="left-sidebar-title">
-      <h2>Bulldog Ganado Tracking</h2>
+      <h2>Bulldog Tracking</h2>
     </div>
     <div *ngFor="let marker of markers">
       <div class="marker-block">
@@ -19,6 +19,6 @@
     </div>
   </div>
   <div class="map-container">
-    <div id="map" class="map"></div>
+    <app-google-map></app-google-map>
   </div>
 </div>
