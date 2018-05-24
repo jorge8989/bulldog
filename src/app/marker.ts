@@ -6,4 +6,5 @@ export class Marker {
   title: string;
   description: string;
   photoUrl: string;
+  phone: number;
 }

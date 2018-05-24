@@ -59,3 +59,8 @@ h1, h2, h3, h4, p, a {
 .marker-right-block {
   padding: 0px 15px;
 }
+
+.phone-link {
+  font-size: 0.8em;
+  color: #7b9eb0;
+}
