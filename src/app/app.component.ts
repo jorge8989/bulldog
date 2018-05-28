@@ -1,21 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { MarkerService } from './marker.service';
-import { MapComponent } from './map/map.component';
-import { Marker } from './marker';
-
+import { Component } from '@angular/core';
 
 @Component({
+  moduleId: module.id,
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  template: `
+    <router-outlet></router-outlet>
+  `,
+  styleUrls: ['app.component.css'],
 })
-export class AppComponent {
-  markers: Marker[];
-  title = 'app';
-  constructor(public markerService: MarkerService) {}
-  ngOnInit() {
-    this.markerService.getMarkers().subscribe(markers => {
-      this.markers = markers;
-    });
-  }
-}
+
+export class AppComponent {}
