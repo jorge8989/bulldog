@@ -7,7 +7,6 @@ import { environment } from '../environments/environment';
 import { MarkerService } from './marker.service';
 
 
-import { MapComponent } from './map/map.component';
 import { GoogleMapComponent } from './google-map/google-map.component';
 import { HomeComponent } from './home/home.component';
 import { AppComponent } from './app.component';
@@ -15,7 +14,6 @@ import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
-    MapComponent,
     GoogleMapComponent,
     HomeComponent,
     AppComponent,

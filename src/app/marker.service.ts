@@ -6,6 +6,7 @@ import { Marker } from './marker';
 
 @Injectable()
 export class MarkerService {
+  public map: any;
   markersCollection: AngularFirestoreCollection<Marker>;
   markers: Observable<Marker[]>;
   constructor(public afs: AngularFirestore) {
@@ -15,5 +16,9 @@ export class MarkerService {
 
   getMarkers() {
     return this.markers;
+  }
+
+  setMap(map: any) {
+    this.map = map;;
   }
 }

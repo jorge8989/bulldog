@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { MarkerService } from './../marker.service';
-import { MapComponent } from './../map/map.component';
 import { Marker } from './../marker';
 
 
@@ -12,6 +11,10 @@ import { Marker } from './../marker';
 export class HomeComponent {
   markers: Marker[];
   title = 'app';
+
+  onSeeInMapClick(marker: Marker) {
+    this.markerService.map.setCenter({ lat: marker.latitude, lng: marker.longitude });
+  }
   constructor(public markerService: MarkerService) {}
   ngOnInit() {
     this.markerService.getMarkers().subscribe(markers => {
