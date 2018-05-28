@@ -1,0 +1,9 @@
+<form (ngSubmit)="onSubmit()">
+  <label for="title">Name</label>
+  <input type="text" [(ngModel)]="marker.name" name="name"><br /><br />
+  <label for="description">Description</label>
+  <input type="text" [(ngModel)]="marker.description" name="description"><br /><br />
+    <label for="description">Phone</label>
+  <input type="number" [(ngModel)]="marker.phone" name="phone"><br /><br />
+  <input type="submit" value="Add marker">
+</form>

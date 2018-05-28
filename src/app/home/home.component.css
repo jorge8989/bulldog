@@ -15,12 +15,12 @@ h1, h2, h3, h4, p, a {
 }
 
 .left-sidebar {
-  width: 30%;
+  width: 20%;
   padding: 0px 15px;
 }
 
 .map-container {
-  width: 70%;
+  width: 80%;
   position: relative;
 }
 
@@ -32,6 +32,17 @@ h1, h2, h3, h4, p, a {
 
 .button {
   background-color: #13b5c7; /* Blue */
+  border: none;
+  color: white;
+  padding: 8px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 3%;
+}
+
+.button-delete {
+  background-color: #B33A3A; /* Blue */
   border: none;
   color: white;
   padding: 8px 8px;

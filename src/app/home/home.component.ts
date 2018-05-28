@@ -21,4 +21,8 @@ export class HomeComponent {
       this.markers = markers;
     });
   }
+
+  deleteMarker(marker: Marker) {
+    this.markerService.deleteMarker(marker);
+  }
 }
