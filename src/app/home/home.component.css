@@ -15,12 +15,14 @@ h1, h2, h3, h4, p, a {
 }
 
 .left-sidebar {
-  width: 20%;
-  padding: 0px 15px;
+  height: 90%;
+  width: 22%;
+  position: relative;
+  top: 10%;
 }
 
 .map-container {
-  width: 80%;
+  width: 78%;
   position: relative;
 }
 
@@ -63,10 +65,16 @@ h1, h2, h3, h4, p, a {
 
 .marker-block {
   display: flex;
-  margin-bottom: 10px;
-  margin-top: 10px;
 }
 
+.marker-block-container {
+  padding: 15px 15px;
+}
+
+.marker-block-container:hover {
+  background-color: #f4f6f8;
+  cursor: pointer;
+}
 .marker-right-block {
   padding: 0px 15px;
 }
@@ -74,4 +82,31 @@ h1, h2, h3, h4, p, a {
 .phone-link {
   font-size: 0.8em;
   color: #7b9eb0;
+}
+
+.markers-sidebar {
+  position: absolute;
+  width: 100%;
+  overflow-y: scroll;
+  top: 0;
+  bottom: 0;
+}
+
+.markers-sidebar::-webkit-scrollbar {
+    display: none;
+}
+
+.left-sidebar-title {
+  background-image: url("http://localhost:4200/assets/images/logo.jpg");
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 78%;
+  bottom: 90%;
+  background: white;
+  padding: 0 15px;
+}
+.logo {
+  max-height: 100%;
+  max-width: 100%;
 }

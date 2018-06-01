@@ -1,4 +1,4 @@
-<agm-map (mapReady)="handleMapReady($event)" [latitude]="-17.783859" [longitude]="-63.181845" [zoom]=14>
+<agm-map (mapReady)="handleMapReady($event)" [latitude]="-17.783859" [longitude]="-63.181845" [zoom]=14 [usePanning]=true>
   <agm-marker *ngFor="let marker of markers" [latitude]="marker.latitude" [longitude]="marker.longitude">
     <agm-info-window><strong>{{marker.name}}</strong></agm-info-window>
   </agm-marker>

@@ -1,24 +1,26 @@
 <div class="container">
   <div class="left-sidebar">
     <div class="left-sidebar-title">
-      <h2>Bulldog Tracking</h2>
+      <img class="logo" [src]="'assets/images/logo.jpg'" alt="">
     </div>
-    <div *ngFor="let marker of markers">
-      <div class="marker-block">
-        <div class="marker-left-block">
-          <img [src]="marker.photoUrl || 'assets/images/profile_pic.png'" class="property-thumbnail"/>
+    <div class="markers-sidebar">
+      <div class="marker-block-container" *ngFor="let marker of markers">
+        <div class="marker-block">
+          <div class="marker-left-block">
+            <img [src]="marker.photoUrl || 'assets/images/profile_pic.png'" class="property-thumbnail"/>
+          </div>
+          <div class="marker-right-block">
+            <p>
+              <strong>{{marker.name}}</strong><br />
+              {{marker.description}}
+            </p>
+            <a href="tel:{{marker.phone}}" class="phone-link">{{marker.phone}}</a>
+          </div>
         </div>
-        <div class="marker-right-block">
-          <p>
-            <strong>{{marker.name}}</strong><br />
-            {{marker.description}}
-          </p>
-          <a href="tel:{{marker.phone}}" class="phone-link">{{marker.phone}}</a>
-        </div>
+        <button class="button" (click)="onSeeInMapClick(marker)">ver en mapa</button>
+        <button class="button">info</button>
+        <button class="button-delete" (click)="deleteMarker(marker)">borrar</button>
       </div>
-      <button class="button" (click)="onSeeInMapClick(marker)">ver en mapa</button>
-      <button class="button">info</button>
-      <button class="button-delete" (click)="deleteMarker(marker)">borrar</button>
     </div>
   </div>
   <div class="map-container">
