@@ -1,4 +1,4 @@
-<div class="container">
+<div class="custom-container">
   <div class="left-sidebar">
     <div class="left-sidebar-title">
       <img class="logo" [src]="'assets/images/logo.jpg'" alt="">
@@ -17,9 +17,9 @@
             <a href="tel:{{marker.phone}}" class="phone-link">{{marker.phone}}</a>
           </div>
         </div>
-        <button class="button" (click)="onSeeInMapClick(marker)">ver en mapa</button>
-        <button class="button">info</button>
-        <button class="button-delete" (click)="deleteMarker(marker)">borrar</button>
+        <button class="btn btn-default btn-sm" (click)="onSeeInMapClick(marker)">ver en mapa</button>
+        <button class="btn btn-info btn-sm">info</button>
+        <button class="btn btn-danger btn-sm" (click)="deleteMarker(marker)">borrar</button>
       </div>
     </div>
   </div>

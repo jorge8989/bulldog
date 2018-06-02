@@ -3,7 +3,7 @@ h1, h2, h3, h4, p, a {
   color: #292b2c;
 }
 
-.container {
+.custom-container {
   display: flex;
   align-items: stretch;
   position: absolute;
@@ -58,8 +58,8 @@ h1, h2, h3, h4, p, a {
 }
 
 .property-thumbnail {
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
 }
 
@@ -73,8 +73,8 @@ h1, h2, h3, h4, p, a {
 
 .marker-block-container:hover {
   background-color: #f4f6f8;
-  cursor: pointer;
 }
+
 .marker-right-block {
   padding: 0px 15px;
 }

@@ -1,9 +1,25 @@
-<form (ngSubmit)="onSubmit()">
-  <label for="title">Name</label>
-  <input type="text" [(ngModel)]="marker.name" name="name"><br /><br />
-  <label for="description">Description</label>
-  <input type="text" [(ngModel)]="marker.description" name="description"><br /><br />
-    <label for="description">Phone</label>
-  <input type="number" [(ngModel)]="marker.phone" name="phone"><br /><br />
-  <input type="submit" value="Add marker">
-</form>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <br />
+      <h2>Crear marcador</h2>
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="title">Nombre</label>
+          <input type="text" [(ngModel)]="marker.name" name="name" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="description">Descripción</label>
+          <input type="text" [(ngModel)]="marker.description" name="description" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="description">Teléfono</label>
+        <input type="number" [(ngModel)]="marker.phone" name="phone" class="form-control">
+        </div>
+        <div class="form-group">
+          <input type="submit" value="Guardar" class="btn btn-primary">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

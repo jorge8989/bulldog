@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MarkerService } from './../marker.service';
 import { Marker } from './../marker';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -13,7 +14,7 @@ export class AddMarkerComponent implements OnInit {
     name: '',
     description: '',
   };
-  constructor(public markerService: MarkerService) { }
+  constructor(public markerService: MarkerService, private router: Router) { }
   ngOnInit() {
   }
   onSubmit() {
@@ -21,6 +22,7 @@ export class AddMarkerComponent implements OnInit {
       this.markerService.addMarker(this.marker);
       this.marker.name = '';
       this.marker.description = '';
+      this.router.navigate(['/']);
     }
   }
 
