@@ -32,8 +32,10 @@ export class MarkerService {
     this.map = map;;
   }
 
-  addMarker(marker: Marker) {
-    this.markersCollection.add(marker);
+  addMarker(marker: Marker, callback: Function) {
+    this.markersCollection.add(marker).then(() => {
+      callback();
+    });
   }
 
   deleteMarker(marker: Marker) {

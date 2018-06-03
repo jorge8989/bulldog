@@ -15,10 +15,10 @@ h1, h2, h3, h4, p, a {
 }
 
 .left-sidebar {
-  height: 90%;
+  height: 85%;
   width: 22%;
   position: relative;
-  top: 10%;
+  top: 15%;
 }
 
 .map-container {
@@ -97,16 +97,20 @@ h1, h2, h3, h4, p, a {
 }
 
 .left-sidebar-title {
-  background-image: url("http://localhost:4200/assets/images/logo.jpg");
   position: fixed;
   top: 0;
   left: 0;
   right: 78%;
-  bottom: 90%;
+  bottom: 85%;
   background: white;
   padding: 0 15px;
 }
 .logo {
-  max-height: 100%;
-  max-width: 100%;
+  max-height: 60%%;
+  max-width: 60%;
+}
+.add-marker-btn {
+  position: absolute;
+  bottom: 5px;
+  left: 15px;
 }

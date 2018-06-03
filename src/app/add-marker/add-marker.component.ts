@@ -19,10 +19,11 @@ export class AddMarkerComponent implements OnInit {
   }
   onSubmit() {
     if (this.marker.name != '' && this.marker.description != '') {
-      this.markerService.addMarker(this.marker);
+      this.markerService.addMarker(this.marker, () => {
+        this.router.navigate(['/']);
+      });
       this.marker.name = '';
       this.marker.description = '';
-      this.router.navigate(['/']);
     }
   }
 

@@ -2,6 +2,7 @@
   <div class="left-sidebar">
     <div class="left-sidebar-title">
       <img class="logo" [src]="'assets/images/logo.jpg'" alt="">
+      <a class="btn btn-outline-secondary btn-sm add-marker-btn" routerLink="/markers/new">Añadir marcador</a>
     </div>
     <div class="markers-sidebar">
       <div class="marker-block-container" *ngFor="let marker of markers">
