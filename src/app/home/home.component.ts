@@ -19,9 +19,6 @@ export class HomeComponent {
   }
   constructor(public markerService: MarkerService) {}
   ngOnInit() {
-    console.log("on init");
-    // this.markerService.getMarkers().length
-
     this.subscription.push(this.markerService.getMarkers().subscribe(markers => {
       this.markers = markers;
     }));

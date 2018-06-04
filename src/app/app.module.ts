@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AddMarkerComponent } from './add-marker/add-marker.component';
 import { FormsModule } from '@angular/forms';
+import { EditMarkerComponent } from './edit-marker/edit-marker.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     AppComponent,
     AddMarkerComponent,
+    EditMarkerComponent,
   ],
   imports: [
     BrowserModule,

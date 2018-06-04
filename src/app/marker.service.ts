@@ -14,7 +14,9 @@ export class MarkerService {
   constructor(public afs: AngularFirestore) {
     afs.firestore.settings({timestampsInSnapshots: true});
     this.markersCollection = this.afs.collection('markers');
-    //this.markers = this.afs.collection('markers').valueChanges();
+  }
+
+  getMarkers() {
     this.markers = this.afs.collection('markers').snapshotChanges().map(changes => {
       return changes.map(a => {
         const data = a.payload.doc.data() as Marker;
@@ -22,10 +24,13 @@ export class MarkerService {
         return data;
       });
     });
+    return this.markers;
   }
 
-  getMarkers() {
-    return this.markers;
+  getMarker(markerId, callback: Function) {
+    this.afs.doc(`markers/${markerId}`).ref.get().then((doc) => {
+      callback(doc.data());
+    });
   }
 
   setMap(map: any) {
@@ -39,7 +44,14 @@ export class MarkerService {
   }
 
   deleteMarker(marker: Marker) {
-    this.markerDoc = this.afs.doc(`markers/${marker.id}`)
+    this.markerDoc = this.afs.doc(`markers/${marker.id}`);
     this.markerDoc.delete();
+  }
+
+  updateMarker(marker: Marker, markerId: string, callback: Function) {
+    this.markerDoc = this.afs.doc(`markers/${markerId}`);
+    this.markerDoc.update(marker).then(() => {
+      callback();
+    });
   }
 }

@@ -19,7 +19,7 @@
           </div>
         </div>
         <button class="btn btn-default btn-sm" (click)="onSeeInMapClick(marker)">ver en mapa</button>
-        <button class="btn btn-info btn-sm">info</button>
+        <button class="btn btn-info btn-sm" [routerLink]="['/markers', marker.id, 'edit']">Editar</button>
         <button class="btn btn-danger btn-sm" (click)="deleteMarker(marker)">borrar</button>
       </div>
     </div>
