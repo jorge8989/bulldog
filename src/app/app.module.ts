@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { AgmCoreModule } from '@agm/core';
 import { environment } from '../environments/environment';
 import { MarkerService } from './marker.service';
@@ -27,6 +28,7 @@ import { EditMarkerComponent } from './edit-marker/edit-marker.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    AngularFontAwesomeModule,
     AngularFireModule.initializeApp(environment.firebase, 'bulldog'),
     AngularFirestoreModule,
     AgmCoreModule.forRoot({

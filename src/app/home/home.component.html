@@ -2,7 +2,7 @@
   <div class="left-sidebar">
     <div class="left-sidebar-title">
       <img class="logo" [src]="'assets/images/logo.jpg'" alt="">
-      <a class="btn btn-outline-secondary btn-sm add-marker-btn" routerLink="/markers/new">Añadir marcador</a>
+      <a class="btn btn-outline-secondary btn-sm add-marker-btn" routerLink="/markers/new"><fa name="plus"></fa>Añadir marcador</a>
     </div>
     <div class="markers-sidebar">
       <div class="marker-block-container" *ngFor="let marker of markers">
@@ -15,12 +15,20 @@
               <strong>{{marker.name}}</strong><br />
               {{marker.description}}
             </p>
-            <a href="tel:{{marker.phone}}" class="phone-link">{{marker.phone}}</a>
+            <a href="tel:{{marker.phone}}" class="phone-link">
+              <fa name="phone"></fa>{{marker.phone}}
+            </a>
           </div>
         </div>
-        <button class="btn btn-default btn-sm" (click)="onSeeInMapClick(marker)">ver en mapa</button>
-        <button class="btn btn-info btn-sm" [routerLink]="['/markers', marker.id, 'edit']">Editar</button>
-        <button class="btn btn-danger btn-sm" (click)="deleteMarker(marker)">borrar</button>
+        <button class="btn btn-secondary btn-sm" (click)="onSeeInMapClick(marker)">
+          <fa name="map-marker"></fa>
+          ver en mapa</button>
+        <button class="btn btn-info btn-sm" [routerLink]="['/markers', marker.id, 'edit']">
+          <fa name="pencil"></fa>
+        </button>
+        <button class="btn btn-danger btn-sm" (click)="deleteMarker(marker)">
+          <fa name="trash"></fa>
+        </button>
       </div>
     </div>
   </div>
